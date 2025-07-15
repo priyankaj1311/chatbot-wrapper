@@ -1,0 +1,79 @@
+<script type="module" defer>
+  import Chatbot from "https://cdn.n8nchatui.com/v1/embed.js";
+  Chatbot.init({
+    "n8nChatUrl": "https://fushia.app.n8n.cloud/webhook/5f1c0c82-0ff9-40c7-9e2e-b1a96ffe24cd/chat",
+    "metadata": {}, // Include any custom data to send with each message to your n8n workflow
+    "theme": {
+      "button": {
+        "backgroundColor": "#007bbf",
+        "right": 20,
+        "bottom": 20,
+        "size": 56,
+        "iconColor": "#ffffff",
+        "customIconSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
+        "customIconSize": 60,
+        "customIconBorderRadius": 15,
+        "autoWindowOpen": {
+          "autoOpen": false,
+          "openDelay": 2
+        },
+        "borderRadius": "rounded"
+      },
+      "tooltip": {
+        "showTooltip": false,
+        "tooltipMessage": "Chat Support",
+        "tooltipBackgroundColor": "#6dcbfd",
+        "tooltipTextColor": "#1c1c1c",
+        "tooltipFontSize": 15
+      },
+      "chatWindow": {
+        "borderRadiusStyle": "rounded",
+        "avatarBorderRadius": 25,
+        "messageBorderRadius": 6,
+        "showTitle": true,
+        "title": "AI HR Assistant",
+        "titleAvatarSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
+        "avatarSize": 40,
+        "welcomeMessage": "Hello! How can I assist you today?",
+        "errorMessage": "Sorry some error occurred. Please try again!",
+        "backgroundColor": "#ffffff",
+        "height": 600,
+        "width": 400,
+        "fontSize": 16,
+        "starterPrompts": [
+          "Casual leaves",
+          "Paid Leaves"
+        ],
+        "starterPromptFontSize": 14,
+        "renderHTML": false,
+        "clearChatOnReload": false,
+        "showScrollbar": true,
+        "botMessage": {
+          "backgroundColor": "#dedede",
+          "textColor": "#000000",
+          "showAvatar": false,
+          "avatarSrc": "https://www.svgrepo.com/show/334455/bot.svg"
+        },
+        "userMessage": {
+          "backgroundColor": "#007bbf",
+          "textColor": "#fcfcfc",
+          "showAvatar": false,
+          "avatarSrc": "https://www.svgrepo.com/show/532363/user-alt-1.svg"
+        },
+        "textInput": {
+          "placeholder": "Type your query",
+          "backgroundColor": "#ffffff",
+          "textColor": "#1e1e1f",
+          "sendButtonColor": "#007bbf",
+          "maxChars": 200,
+          "maxCharsWarningMessage": "You exceeded the characters limit. Please input less than 200 characters.",
+          "autoFocus": false,
+          "borderRadius": 6,
+          "sendButtonBorderRadius": 50
+        }
+      }
+    }
+    });
+  </script>
+
+
