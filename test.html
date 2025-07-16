@@ -40,12 +40,29 @@
     #n8n-chat-container .chat-header p {
       color: #fff !important;
     }
-
-    /* User message (input styling only, as messages are not styled separately by user/bot here) */
-    #n8n-chat-container .chat-input textarea {
+  
+    /* bot message */
+    #n8n-chat-container .chat-message-from-bot {
+      background-color: #dedede !important; /* light grey */
+      color: #000000 !important;            /* black text */
       border-radius: 6px;
-      padding: 10px;
-      font-size: 14px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      max-width: 80%;
+      display: inline-block;
+      text-align: left;
+    }
+
+    /* User message*/
+    #n8n-chat-container .chat-message-from-user {
+      background-color: #007bbf !important;
+      color: #fcfcfc !important;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      max-width: 80%;
+      display: inline-block;
+      text-align: right;
     }
 
     /* Send button styling */
@@ -53,10 +70,15 @@
       background-color: #007bbf !important;
       border-radius: 50px;
       color: #fff !important;
+      width: 36px;  /* adjust as needed */
+      height: 36px; /* adjust as needed */
+      padding: 4px; /* optional: fine-tune icon spacing */
     }
 
     #n8n-chat-container .chat-input-send-button svg {
       fill: #fff !important;
+      width: 20px;
+      height: 20px;
     }
 
     /* Bot message styling */
@@ -77,6 +99,27 @@
       padding: 10px;
     }
 
+    /* Reduce chat header height and update title */
+    #n8n-chat-container .chat-header {
+      background-color: #007bbf !important; /* your brand blue */
+      color: #ffffff !important;
+      height: 50px; /* reduce height */
+      padding: 5px 10px; /* adjust padding if needed */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    
+    #n8n-chat-container .chat-header h1 {
+      font-size: 16px; /* smaller font */
+      margin: 0;
+      color: #ffffff !important;
+    }
+    
+    #n8n-chat-container .chat-header p {
+      display: none; /* hide subtext if not needed */
+    }
+
   </style>
 </head>
 <body>
@@ -93,6 +136,13 @@
       webhookUrl: 'https://fushia.app.n8n.cloud/webhook/5f1c0c82-0ff9-40c7-9e2e-b1a96ffe24cd/chat',
       target: '#n8n-chat-container' // renders chat inside this div
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const headerTitle = document.querySelector('#n8n-chat-container .chat-header h1');
+    if (headerTitle) {
+      headerTitle.innerHTML = 'AI HR Assistant';
+    }
+  });
   </script>
 
 </body>
