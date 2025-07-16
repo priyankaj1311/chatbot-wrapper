@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI HR Assistant Chatbot</title>
+  <title>AI HR Assistant Chatbot Test</title>
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
   <style>
     body {
@@ -11,21 +11,72 @@
       margin: 0;
       padding: 20px;
     }
+
     h1 {
       font-size: 24px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 16px;
       max-width: 600px;
       margin: auto auto 20px auto;
     }
-    .n8n-chat-container { border-radius: 10px; }
-    .n8n-chat-header { background-color: #007bbf !important; color: #fff !important; }
-    .n8n-chat-user-message { background-color: #007bbf !important; color: #fcfcfc !important; }
-    .n8n-chat-bot-message { background-color: #dedede !important; color: #000 !important; }
-    .n8n-chat-input input { border-radius: 6px; }
-    .n8n-chat-input button { background-color: #007bbf !important; border-radius: 50px; color: #fff; }
+
+    /* Chat container */
+    #n8n-chat-container .chat-window {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Chat header */
+    #n8n-chat-container .chat-header {
+      background-color: #007bbf !important;
+      color: #fff !important;
+    }
+
+    #n8n-chat-container .chat-header h1,
+    #n8n-chat-container .chat-header p {
+      color: #fff !important;
+    }
+
+    /* User message (input styling only, as messages are not styled separately by user/bot here) */
+    #n8n-chat-container .chat-input textarea {
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    /* Send button styling */
+    #n8n-chat-container .chat-input-send-button {
+      background-color: #007bbf !important;
+      border-radius: 50px;
+      color: #fff !important;
+    }
+
+    #n8n-chat-container .chat-input-send-button svg {
+      fill: #fff !important;
+    }
+
+    /* Bot message styling */
+    #n8n-chat-container .chat-message-from-bot {
+      background-color: #dedede !important;
+      color: #000 !important;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      max-width: 80%;
+      display: inline-block;
+      text-align: left;
+    }
+
+    /* General chat messages list styling for alignment */
+    #n8n-chat-container .chat-messages-list {
+      text-align: left;
+      padding: 10px;
+    }
+
   </style>
 </head>
 <body>
