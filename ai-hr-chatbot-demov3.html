@@ -19,6 +19,9 @@
 	  --chat--message--bot--color: #000000;
 	  --chat--toggle--background: #007bbf;
 	}
+  #n8n-chat-container .chat-header p {
+  	display: none;
+	}
 
   </style>
 </head>
@@ -38,7 +41,7 @@
       initialMessages: [
 	    'Hello, How can I assist you today?'
 	  ],
-    i18n: {
+      i18n: {
 		en: {
 			title: 'AI HR Assistant',
 			subtitle: "",
@@ -49,12 +52,7 @@
 	},
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-    const headerTitle = document.querySelector('#n8n-chat-container .chat-header h1');
-    if (headerTitle) {
-      headerTitle.innerHTML = 'AI HR Assistant';
-    }
-  });
+    
   </script>
 
 </body>
