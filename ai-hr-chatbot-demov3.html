@@ -34,7 +34,19 @@
 
     createChat({
       webhookUrl: 'https://fushia.app.n8n.cloud/webhook/5f1c0c82-0ff9-40c7-9e2e-b1a96ffe24cd/chat',
-      target: '#n8n-chat-container' // renders chat inside this div
+      target: '#n8n-chat-container' // renders chat inside this div,
+      initialMessages: [
+	    'Hello, How can I assist you today?'
+	  ],
+    i18n: {
+		en: {
+			title: 'AI HR Assistant',
+			subtitle: "",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
     });
 
     document.addEventListener("DOMContentLoaded", function() {
