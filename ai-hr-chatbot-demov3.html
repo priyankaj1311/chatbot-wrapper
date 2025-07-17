@@ -16,7 +16,8 @@
 	  --chat--header--color: #ffffff;
 	  --chat--message--user--background: #007bbf;
 	  --chat--message--user--color: #ffffff;
-	  --chat--message--bot--background: #dedede;
+	  --chat--message--bot--background: #f1f2f4;
+	    --chat--message--border-radius: 18px; /* rounded bubbles */
 	  --chat--message--bot--color: #000000;
 	    --chat--message--padding: var(--chat--spacing);
 	  --chat--toggle--background: #007bbf;
@@ -32,6 +33,14 @@
 
 	  #n8n-chat-container .chat-window {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle 3D effect */
+}
+	  #n8n-chat-container .chat-message-from-bot {
+  max-width: 70%;
+}
+
+#n8n-chat-container .chat-message-from-user {
+  max-width: 70%;
+  margin-left: auto;
 }
 
   </style>
