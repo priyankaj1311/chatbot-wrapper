@@ -39,8 +39,9 @@
 }
 
 #n8n-chat-container .chat-message-from-user {
-  max-width: 70%;
-  margin-left: auto;
+  width: auto !important;      /* content-based width */
+  max-width: 70% !important;   /* prevent too wide bubbles */
+  margin-left: auto !important; /* align to right */
 }
 
   </style>
